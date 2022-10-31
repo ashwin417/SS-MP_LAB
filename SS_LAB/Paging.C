@@ -122,15 +122,68 @@ void main()
 	
 	printf("\n -----Frame Table-----\n");
 	printf("\n-----------------------------------");
-	printf("\nFrame no\tPage No.\Process no");
-	printf("\n-----------------------------------");
+	printf("\nFrame no\tPage No.\tProcess no");
+	printf("\n-----------------------------------\n");
+	int framear[50],pagear[50],processar[50],ab=0;
 	for (i = 0; i < nof; i++)
 	{
 		
 		for (j = 0; j < process[i].n; j++)
 		{
 			if(process[i].p[j]!=-1){
-			printf("\n%d\t\t%d\t\t%d", process[i].p[j],j,i);}
+			//printf("\n%d\t\t%d\t\t%d", process[i].p[j],j,i);
+			
+			framear[ab]=process[i].p[j];
+			pagear[ab]=j;
+			processar[ab++]=i;
+			}
 		}
 	}
+	
+	int tempf,pos;
+	for(i=0;i<ab;i++)
+	{
+	pos = i;
+		for(j=i+1;j<ab;j++)
+		{
+			if(framear[j]<framear[pos])
+				pos = j;
+		}
+//Swapping 
+	tempf=framear[i];
+	framear[i]=framear[pos];
+	framear[pos]=tempf;
+
+	tempf=pagear[i];
+	pagear[i]=pagear[pos];
+	pagear[pos]=tempf;
+	
+	tempf=processar[i];
+	processar[i]=processar[pos];
+	processar[pos]=tempf;
+	
+	}
+	
+	for(i=0;i<ab;i++)
+	{
+	printf("%d\t%d\t%d\n",framear[i],pagear[i],processar[i]);
+	}		
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
