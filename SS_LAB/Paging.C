@@ -66,7 +66,7 @@ void main()
 			
 			else
 			{
-				if (frame1 > nof)
+				if (frame1 >= nof)
 				{
 					printf("\n\t - Error! %d is out of bound of frame.",frame1);
 				}
@@ -108,7 +108,7 @@ void main()
 	for (i = 0; i < nop; i++)
 	{
 		printf("\n-----------------------------------");
-		printf("\nPage no\t\tProcess No.\t\tFrame no");
+		printf("\nPage no\tProcess No.\tFrame no");
 		printf("\n-----------------------------------");
 		for (j = 0; j < process[i].n; j++)
 		{
@@ -116,4 +116,16 @@ void main()
 		}
 	}
 	printf("\n");
+	
+	printf("\n -----Frame Table-----\n");
+	for (i = 0; i < nof; i++)
+	{
+		printf("\n-----------------------------------");
+		printf("\nFrame no\tProcess No.\tPage no");
+		printf("\n-----------------------------------");
+		for (j = 0; j < frame_size; j++)
+		{
+			printf("\n%d\t\t%d\t\t%d", i,j, process[i].n);
+		}
+	}
 }
