@@ -24,7 +24,7 @@ int no_free_frames()
 void main()
 {
 	
-	int mem_size, frame_size, nop, i, j, y, pno, z, frame1, temp, k, l;
+	int mem_size, frame_size, nop, i, j, y, pno, z, frame1, temp, k, l,topt;
 	struct page process[50];
 	printf("\nEnter the main memory size in bytes:");
 	scanf("%d", &mem_size);
@@ -70,7 +70,7 @@ void main()
 				{
 					printf("\n\t - Error! %d is out of bound of frame.",frame1);
 				}
-				printf("\nalready allocated frame:");
+				//printf("\nalready allocated frame:");
 				y = no_free_frames();
 				printf("\nnumber of free frames: %d", y);
 				printf("\nthe free frames are: ");
@@ -85,6 +85,9 @@ void main()
 				if (y == 0 || y < process[i].n)
 				{
 					printf("\nNo enough frames are free to be allocated to this process!");
+					//printf("\nDo you want to terminate : ");
+					//scanf("%d",&topt);
+					//if(topt=1){
 					printf("\nEnter the process to be terminated:");
 					scanf("%d", &pno);
 					for (z = 0; z < process[pno].n; z++)
@@ -94,7 +97,7 @@ void main()
 						frame[l] = 0;
 						process[pno].p[z] = -1;
 					}
-					goto x;
+					goto x; //} else break;
 				}
 				else
 				{
@@ -115,7 +118,19 @@ void main()
 			printf("\n%d\t\t%d\t\t%d", j,i, process[i].p[j]);
 		}
 	}
-	printf("\n");
+	printf("\n**** -1 indicates not allocated\n\n");
 	
-	
+	printf("\n -----Frame Table-----\n");
+	printf("\n-----------------------------------");
+	printf("\nFrame no\tPage No.\Process no");
+	printf("\n-----------------------------------");
+	for (i = 0; i < nof; i++)
+	{
+		
+		for (j = 0; j < process[i].n; j++)
+		{
+			if(process[i].p[j]!=-1){
+			printf("\n%d\t\t%d\t\t%d", process[i].p[j],j,i);}
+		}
+	}
 }
