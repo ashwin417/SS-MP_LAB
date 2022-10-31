@@ -117,15 +117,5 @@ void main()
 	}
 	printf("\n");
 	
-	printf("\n -----Frame Table-----\n");
-	for (i = 0; i < nof; i++)
-	{
-		printf("\n-----------------------------------");
-		printf("\nFrame no\tProcess No.\tPage no");
-		printf("\n-----------------------------------");
-		for (j = 0; j < frame_size; j++)
-		{
-			printf("\n%d\t\t%d\t\t%d", i,j, process[i].n);
-		}
-	}
+	
 }
