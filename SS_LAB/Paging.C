@@ -66,9 +66,9 @@ void main()
 			
 			else
 			{
-				if (frame1 >= nof)
+				if (frame1 > nof)
 				{
-					printf("\n\t - Error! %d is out of bound of frame.",&frame1);
+					printf("\n\t - Error! %d is out of bound of frame.",frame1);
 				}
 				printf("\nalready allocated frame:");
 				y = no_free_frames();
