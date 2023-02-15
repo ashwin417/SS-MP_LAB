@@ -6,12 +6,12 @@ Enter starting block & length of the files : 14 3
 14	1
 15	1
 16	1
-The file is allocation to disk
+The file is allocated to disk
 Do you want to enter more files? 
 	 Yes => 1 , No => 0
 Enter your choice : 1
 Enter starting block & length of the files : 14 1
-The file is allocation to disk
+The file is not allocated to disk
 Do you want to enter more files? 
 	 Yes => 1 , No => 0
 Enter your choice : 1
