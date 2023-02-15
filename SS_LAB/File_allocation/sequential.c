@@ -8,6 +8,7 @@ void main()
 	{
 		f[i]=0;
 	}
+	while(1){
 	printf("Files allocated are : \n");
 	x : count = 0;
 	printf("Enter starting block & length of the files : ");
@@ -27,12 +28,13 @@ void main()
 				printf("%d\t%d\n",j,f[j]);
 			}	
 		}
-	}
+	
 	
 	if(st>=50)
 		printf("Cannot Allocate\n");
 	else if(j!=(st+len-1))
 		printf("The file is allocated to disk\n");
+	}
 	else 
 		printf("The file is not allocated\n");
 	printf("Do you want to enter more files? \n\t Yes => 1 , No => 0\nEnter your choice : ");
@@ -41,4 +43,5 @@ void main()
 		goto x;
 	else
 		exit(0);
+	}
 }
