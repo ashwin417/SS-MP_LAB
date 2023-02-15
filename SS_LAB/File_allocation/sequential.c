@@ -25,14 +25,14 @@ void main()
 			{
 				f[j]=1;
 				printf("%d\t%d\n",j,f[j]);
-			}
+			}	
 		}
 	}
 	
-	if(st>=80)
+	if(st>=50)
 		printf("Cannot Allocate\n");
 	else if(j!=(st+len-1))
-		printf("The file is allocation to disk\n");
+		printf("The file is allocated to disk\n");
 	else 
 		printf("The file is not allocated\n");
 	printf("Do you want to enter more files? \n\t Yes => 1 , No => 0\nEnter your choice : ");
