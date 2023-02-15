@@ -18,7 +18,9 @@ void main()
 		if(f[k]==0)
 			count++;
 	}
-	if(len==count)
+	if(st>=50)
+			printf("Cannot Allocate\n");
+	else if(len==count)
 	{
 		for(j=st;j<(st+len);j++)
 		{
@@ -30,9 +32,7 @@ void main()
 		}
 	
 	
-		if(st>=50)
-			printf("Cannot Allocate\n");
-		else if(j!=(st+len-1))
+		if(j!=(st+len-1))
 			printf("The file is allocated to disk\n");
 	}
 	else 
