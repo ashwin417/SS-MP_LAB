@@ -8,7 +8,6 @@ void main()
 	{
 		f[i]=0;
 	}
-	while(1){
 	printf("Files allocated are : \n");
 	x : count = 0;
 	printf("Enter starting block & length of the files : ");
@@ -43,5 +42,4 @@ void main()
 		goto x;
 	else
 		exit(0);
-	}
 }
